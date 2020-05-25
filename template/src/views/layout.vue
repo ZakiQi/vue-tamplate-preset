@@ -13,8 +13,8 @@ export default {
 <style lang="less" scoped>
 .fixedLayout {
   box-sizing: border-box;
-  padding-left: 230px;
-  padding-top: 130px;
+  padding-left: 0;
+  padding-top: 0;
   width: 100vw;
   height: 100vh;
 }
