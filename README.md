@@ -26,7 +26,7 @@ project-name> cd ..
 ## Develop
 
 ```
-npm run dev
+npm run serve
 ```
 
 ## Build
