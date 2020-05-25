@@ -40,7 +40,6 @@ module.exports = (api, opts, rootOpts) => {
   // 安装一些基础公共库
   api.extendPackage({
     dependencies: {
-      "terser-webpack-plugin": "^2.3.5",
       "vue": "^2.6.11",
       "vue-router": "^3.1.5",
       "vuex": "^3.1.2",
@@ -48,6 +47,7 @@ module.exports = (api, opts, rootOpts) => {
       'babel-polyfill': '^6.22.0',
       'lodash': '^4.17.11',
       "echarts": "^4.2.0-rc.1",
+      'normalize.css': '^8.0.0'
     },
     // 开发依赖包
     devDependencies: {
@@ -61,11 +61,7 @@ module.exports = (api, opts, rootOpts) => {
       "eslint": "^6.7.2",
       "eslint-plugin-prettier": "^3.1.1",
       "eslint-plugin-vue": "^6.1.2",
-      // "less": "^3.0.4",
-      // "less-loader": "^5.0.0",
-      "lint-staged": "^9.5.0",
-      "prettier": "^1.19.1",
-      "vue-template-compiler": "^2.6.11"
+      // "vue-template-compiler": "^2.6.11"
     }
   });
 
