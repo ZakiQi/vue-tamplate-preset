@@ -1,18 +1,22 @@
 {
-  "useConfigFiles": true,
+  "useTaobaoRegistry": true,
+  "git": false,
+  "useConfigFiles": false,
   "plugins": {
     "@vue/cli-plugin-babel": {},
-    "@vue/cli-plugin-router": {
-      "historyMode": true
-    },
-    "@vue/cli-plugin-vuex": {},
     "@vue/cli-plugin-eslint": {
-      "config": "prettier",
-      "lintOn": [
-        "save",
-        "commit"
-      ]
-    }
+      "prompts": true
+    },
+    "@vue/cli-plugin-e2e-nightwatch": {},
+    "@vue/cli-plugin-unit-mocha": {}
   },
-  "cssPreprocessor": "less"
+  "router": true,
+  "vuex": true,
+  "configs": {
+    "vue": {
+      "baseUrl": "./",
+      "lintOnSave": true,
+      "productionSourceMap": false
+    }
+  }
 }
