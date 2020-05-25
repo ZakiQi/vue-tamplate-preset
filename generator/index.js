@@ -51,19 +51,17 @@ module.exports = (api, opts, rootOpts) => {
     },
     // 开发依赖包
     devDependencies: {
-      // "@vue/cli-plugin-babel": "~4.2.0",
-      // "@vue/cli-plugin-eslint": "~4.2.0",
-      // "@vue/cli-plugin-router": "~4.2.0",
-      // "@vue/cli-plugin-vuex": "~4.2.0",
-      // "@vue/cli-service": "~4.2.0",
-      // "@vue/eslint-config-prettier": "^6.0.0",
-      // "babel-eslint": "^10.0.3",
-      // "eslint": "^6.7.2",
-      // "eslint-plugin-prettier": "^3.1.1",
-      // "eslint-plugin-vue": "^6.1.2",
+      "@vue/cli-plugin-babel": "~4.2.0",
+      "@vue/cli-plugin-eslint": "~4.2.0",
+      "@vue/cli-plugin-router": "~4.2.0",
+      "@vue/cli-plugin-vuex": "~4.2.0",
+      "@vue/cli-service": "~4.2.0",
+      "@vue/eslint-config-prettier": "^6.0.0",
+      "babel-eslint": "^10.0.3",
+      "eslint": "^6.7.2",
+      "eslint-plugin-prettier": "^3.1.1",
+      "eslint-plugin-vue": "^6.1.2",
       "vue-template-compiler": "^2.6.11",
-      'serve': '^10.0.1',
-      'style-resources-loader': '1.2.1'
     }
   });
 
