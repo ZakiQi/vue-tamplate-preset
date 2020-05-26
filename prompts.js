@@ -43,15 +43,19 @@ module.exports = [
     message: 'choice UI Framework',
     choices: [
       {
+        name: 'Element UI',
+        value: 'element-ui'
+      },
+      {
         name: 'iView',
         value: 'iview'
       },
       {
-        name: 'Element UI',
-        value: 'element-ui'
+        name: 'none',
+        value: 'none'
       }
     ],
-    default: 'element-ui'
+    default: 'none'
   },
   // {
   //   name: 'Mock Server',
