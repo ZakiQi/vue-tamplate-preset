@@ -35,12 +35,6 @@ npm run serve
 npm run build
 ```
 
-## Review
-
-```
-npm run review
-```
-
 ## 功能列表
 
 - [x] postcss/less/sass
@@ -49,11 +43,8 @@ npm run review
 - [x] vue-router/vuex
 - [x] mock server
 - [x] style-resources-loader
-- [x] i18n
+<!-- - [x] i18n -->
 - [x] axios
-- [x] PWA
-- [x] unit(mocha)/e2e(Nightwatch)
-- [ ] nuxt.js/egg.js
 
 ### css预处理器全局变量
 
@@ -86,21 +77,17 @@ function addStyleResource (rule) {
     color: @color;
   }
 </style>
-```
 
-### preset模板
-
-当前 preset 模板暂只有 `default` 默认模板，对于 `ts`、`egg`、`nuxt` 模板添加时间待定。
 
 ### UI 框架
 
-本 preset 支持 `element-ui` 和 `iview`（默认）两种。
+本 preset 支持 `element-ui`（默认） 和 `iview`两种。
 
-![iview](./screenshot/iview.png)
+<!-- ![iview](./screenshot/iview.png) -->
 
 iView
 
-![element-ui](./screenshot/element-ui.png)
+<!-- ![element-ui](./screenshot/element-ui.png) -->
 
 element-ui
 
