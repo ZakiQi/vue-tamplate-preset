@@ -103,7 +103,7 @@ module.exports = (api, opts, rootOpts) => {
     Object.keys(files)
       .filter(path => path.startsWith('src/') || path.startsWith('public/'))
       .forEach(path => delete files[path])
-    console.log(Object.keys(files))
+    console.log(Object.keys(files, '--------------'))
   })
 
   // 生成模版（如果配ssr，渲染的位置可能会不同）

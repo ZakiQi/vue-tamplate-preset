@@ -38,6 +38,38 @@ module.exports = [
     default: false
   },
   {
+    name: 'ui-framework',
+    type: 'list',
+    message: 'choice UI Framework',
+    choices: [
+      {
+        name: 'iView',
+        value: 'iview'
+      },
+      {
+        name: 'Element UI',
+        value: 'element-ui'
+      }
+    ],
+    default: 'element-ui'
+  },
+  {
+    name: 'Mock Server',
+    type: 'list',
+    message: 'choice mock server',
+    choices: [
+      {
+        name: 'Easy Mock',
+        value: 'easymock'
+      },
+      {
+        name: 'Kuaizi db',
+        value: 'kzdb'
+      }
+    ],
+    default: 'easymock'
+  },
+  {
     name: 'Server Port',
     type: 'input',
     message: 'Input DevServer Port(default: 8081)',
