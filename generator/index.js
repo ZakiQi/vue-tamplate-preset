@@ -47,7 +47,8 @@ module.exports = (api, opts, rootOpts) => {
       'babel-polyfill': '^6.22.0',
       'lodash': '^4.17.11',
       "echarts": "^4.2.0-rc.1",
-      'normalize.css': '^8.0.0'
+      'normalize.css': '^8.0.0',
+      [opts['ui-framework']]: opts['ui-framework'] === 'element-ui' ? '^2.4.7' : '^3.1.1'
     },
     // 开发依赖包
     devDependencies: {

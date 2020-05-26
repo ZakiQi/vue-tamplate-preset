@@ -53,29 +53,21 @@ module.exports = [
     ],
     default: 'element-ui'
   },
-  {
-    name: 'Mock Server',
-    type: 'list',
-    message: 'choice mock server',
-    choices: [
-      {
-        name: 'Easy Mock',
-        value: 'easymock'
-      },
-      {
-        name: 'Kuaizi db',
-        value: 'kzdb'
-      }
-    ],
-    default: 'easymock'
-  },
-  {
-    name: 'Server Port',
-    type: 'input',
-    message: 'Input DevServer Port(default: 8081)',
-    default: '8081',
-    validate: (n) => {
-      return !isNaN(+n)
-    }
-  }
+  // {
+  //   name: 'Mock Server',
+  //   type: 'list',
+  //   message: 'choice mock server',
+  //   choices: [
+  //     {
+  //       name: 'Easy Mock',
+  //       value: 'easymock'
+  //     },
+  //     {
+  //       name: 'Kuaizi db',
+  //       value: 'kzdb'
+  //     }
+  //   ],
+  //   default: 'easymock'
+  // },
+  // {
 ]
