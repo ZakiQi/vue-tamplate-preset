@@ -25,8 +25,7 @@
 //     }
 //   };
 // };
-module.exports = (api, opts, rootOpts) => {
-  console.log(opts, '-----------------------------------')
+module.exports = (api, options, rootoptions) => {
   // const utils = tool(api);
   // 命令
   api.extendPackage({
@@ -48,8 +47,8 @@ module.exports = (api, opts, rootOpts) => {
       'babel-polyfill': '^6.22.0',
       'lodash': '^4.17.11',
       "echarts": "^4.2.0-rc.1",
-      'normalize.css': '^8.0.0'
-      // [opts['ui-framework']]: opts['ui-framework'] === 'element-ui' ? '^2.4.7' : '^3.1.1'
+      'normalize.css': '^8.0.0',
+      [options['ui-framework']]: options['ui-framework'] === 'element-ui' ? '^2.4.7' : '^3.5.4'
     },
     // 开发依赖包
     devDependencies: {
@@ -64,11 +63,12 @@ module.exports = (api, opts, rootOpts) => {
       "eslint-plugin-prettier": "^3.1.1",
       "eslint-plugin-vue": "^6.1.2",
       "vue-template-compiler": "^2.6.11",
+      'style-resources-loader': '1.2.1'
     }
   });
 
   // # less
-  if (opts['cssPreprocessor'] === 'less') {
+  if (options['cssPreprocessor'] === 'less') {
     api.extendPackage({
       devDependencies: {
         "less": "^2.7.2",
@@ -78,7 +78,7 @@ module.exports = (api, opts, rootOpts) => {
   }
 
   // # sass
-  if (opts['cssPreprocessor'] === 'sass') {
+  if (options['cssPreprocessor'] === 'sass') {
     api.extendPackage({
       devDependencies: {
         "node-sass": "^4.9.3",
@@ -102,6 +102,7 @@ module.exports = (api, opts, rootOpts) => {
 
   // 删除 vue-cli3 默认目录
   api.render(files => {
+    console.log(Object.keys(files).filter(path => path.startsWith('src/') || path.startsWith('public/')), '========')
     Object.keys(files)
       .filter(path => path.startsWith('src/') || path.startsWith('public/'))
       .forEach(path => delete files[path])

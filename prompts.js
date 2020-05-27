@@ -40,7 +40,7 @@ module.exports = [
   {
     name: 'ui-framework',
     type: 'list',
-    message: 'choice UI Framework',
+    message: 'choice UI ui-framework',
     choices: [
       {
         name: 'Element UI',
