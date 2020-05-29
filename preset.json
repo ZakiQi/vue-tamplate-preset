@@ -1,7 +1,6 @@
 {
   "useTaobaoRegistry": true,
   "git": false,
-  "useConfigFiles": false,
   "plugins": {
     "@vue/cli-plugin-babel": {},
     "@vue/cli-plugin-eslint": {
@@ -16,5 +15,6 @@
       "lintOnSave": true,
       "productionSourceMap": false
     }
-  }
+  },
+  "useConfigFiles": false
 }
