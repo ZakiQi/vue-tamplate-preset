@@ -15,28 +15,28 @@ module.exports = [
     ],
     default: 'less'
   },
-  {
-    name: 'Vue Router mode',
-    type: 'list',
-    message: 'Choice Vue Router History mode',
-    choices: [
-      {
-        name: 'Hash',
-        value: 'hash'
-      },
-      {
-        name: 'history',
-        value: 'history'
-      }
-    ],
-    default: 'hash'
-  },
-  {
-    name: 'Typescript',
-    type: 'confirm',
-    message: 'Add support for the TypeScript language (default: None)',
-    default: false
-  },
+  // {
+  //   name: 'Vue Router mode',
+  //   type: 'list',
+  //   message: 'Choice Vue Router History mode',
+  //   choices: [
+  //     {
+  //       name: 'Hash',
+  //       value: 'hash'
+  //     },
+  //     {
+  //       name: 'history',
+  //       value: 'history'
+  //     }
+  //   ],
+  //   default: 'hash'
+  // },
+  // {
+  //   name: 'Typescript',
+  //   type: 'confirm',
+  //   message: 'Add support for the TypeScript language (default: None)',
+  //   default: false
+  // },
   {
     name: 'ui-framework',
     type: 'list',
@@ -73,5 +73,13 @@ module.exports = [
   //   ],
   //   default: 'easymock'
   // },
-  // {
+  {
+    name: 'Server Port',
+    type: 'input',
+    message: 'Input DevServer Port(default: 8081)',
+    default: '8081',
+    validate: (n) => {
+      return !isNaN(+n)
+    }
+  }
 ]

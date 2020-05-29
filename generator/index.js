@@ -1,32 +1,5 @@
-// const fs = require('fs');
-// const tool = (api) => {
-//   return {
-//     deleteFile(path) {
-//       const file = api.resolve(path);
-//       if (fs.existsSync(file)) {
-//         fs.unlinkSync(file);
-//       }
-//     },
-//     deleteDir(path) {
-//       const dir = api.resolve(path);
-//       if (fs.existsSync(dir)) {
-//         fs.readdirSync(dir).forEach((o) => {
-//           const file = dir + '\\' + o;
-//           if (fs.statSync(file).isDirectory()) {
-//             fs.readdirSync(dir).forEach((p) => {
-//               fs.unlinkSync(dir + '\\' + o + '\\' + p);
-//             });
-//           } else {
-//             fs.unlinkSync(file);
-//           }
-//         });
-//         fs.rmdirSync(dir);
-//       }
-//     }
-//   };
-// };
 module.exports = (api, options, rootoptions) => {
-  // const utils = tool(api);
+  console.log(rootoptions, 'rootoptions')
   // 命令
   api.extendPackage({
     scripts: {
@@ -48,7 +21,6 @@ module.exports = (api, options, rootoptions) => {
       'lodash': '^4.17.11',
       "echarts": "^4.2.0-rc.1",
       'normalize.css': '^8.0.0',
-      [options['ui-framework']]: options['ui-framework'] === 'element-ui' ? '^2.4.7' : '^3.5.4'
     },
     // 开发依赖包
     devDependencies: {
@@ -66,6 +38,24 @@ module.exports = (api, options, rootoptions) => {
       'style-resources-loader': '1.2.1'
     }
   });
+
+  // element-ui
+  if (options['ui-framework'] === 'element-ui') {
+    api.extendPackage({
+      dependencies: {
+        "element-ui": "^2.4.7",
+      }
+    })
+  }
+
+  // iview
+  if (options['ui-framework'] === 'iview') {
+    api.extendPackage({
+      dependencies: {
+        "iview": "^3.5.4",
+      }
+    })
+  }
 
   // # less
   if (options['cssPreprocessor'] === 'less') {
@@ -99,18 +89,15 @@ module.exports = (api, options, rootoptions) => {
     }
   })
 
-
-  // 删除 vue-cli3 默认目录
+  // 删除多余的模板
   api.render(files => {
-    console.log(Object.keys(files).filter(path => path.startsWith('src/') || path.startsWith('public/')), '========')
     Object.keys(files)
-      .filter(path => path.startsWith('src/') || path.startsWith('public/'))
-      .forEach(path => delete files[path])
-    console.log(Object.keys(files, '--------------'))
+          .filter(path => path.startsWith('src/') || path.startsWith('public/'))
+          .forEach(path => delete files[path])
   })
 
   // 生成模版（如果配ssr，渲染的位置可能会不同）
-  api.render('../template');
+  api.render('./template');
 
   api.onCreateComplete(() => {
     process.env.VUE_CLI_SKIP_WRITE = true;
