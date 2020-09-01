@@ -23,6 +23,12 @@ project-name> cd ..
 > vue create --preset ./vue-tamplate-preset project-name --no-git
 ```
 
+## 备注
+
+```
+目前删除原vue-cli的src目录逻辑尚有问题，第一次执行时要把项目中的src文件删除，然后把.src文件重命名为src。
+```
+
 ## Develop
 
 ```
