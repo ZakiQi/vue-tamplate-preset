@@ -16,6 +16,13 @@ import 'iview/dist/styles/iview.css';
 Vue.use(iView)
 <% } %>
 
+<% if (options['ui-framework'] === 'antd') {%>
+  // 使用Antd
+  import Antd from 'ant-design-vue'
+  import 'ant-design-vue/dist/antd.css'
+  Vue.use(Antd)
+  <% } %>
+
 import Store from './store'
 
 

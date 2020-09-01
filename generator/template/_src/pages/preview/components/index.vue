@@ -1,5 +1,5 @@
 <template>
   <div>
-    终于搞定多页面了
+    本页是多页——preview
   </div>
 </template>

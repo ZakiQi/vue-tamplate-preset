@@ -51,6 +51,10 @@ module.exports = [
         value: 'iview'
       },
       {
+        name: 'antd',
+        value: 'antd'
+      },
+      {
         name: 'none',
         value: 'none'
       }

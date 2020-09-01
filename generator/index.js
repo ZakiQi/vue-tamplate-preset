@@ -24,7 +24,8 @@ module.exports = (api, options, rootoptions) => {
     // 开发依赖包
     devDependencies: {
       'serve': '^10.0.1',
-      'style-resources-loader': '1.2.1'
+      'style-resources-loader': '1.2.1',
+      "compression-webpack-plugin": "^5.0.1"
     }
   });
 
@@ -42,6 +43,15 @@ module.exports = (api, options, rootoptions) => {
     api.extendPackage({
       dependencies: {
         "iview": "^3.5.4",
+      }
+    })
+  }
+
+  // antd-vue
+  if (options['ui-framework'] === 'antd') {
+    api.extendPackage({
+      dependencies: {
+        "ant-design-vue": "^1.6.5",
       }
     })
   }
