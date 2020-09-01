@@ -76,12 +76,12 @@ module.exports = {
             .alias
               .set('@', resolve('src'))
               .set('vue$', resolve('./node_modules/vue/dist/vue.common.js'))
-              .set('assets', resolve('src/assets'))
-              .set('components', resolve('src/components'))
-              .set('View', resolve('src/view'))
+              .set('assets', resolve('@/assets'))
+              .set('components', resolve('@/components'))
               .set('Lib', resolve('src/lib'))
-              .set('@preview', resolve('src/pages/preview'))
-              .set('@index', resolve('src/pages/index/components'))
+              .set('API', resolve('Lib/services'))
+              .set('@preview', resolve('@/pages/preview'))
+              .set('@index', resolve('@/pages/index/components'))
 
     // 添加 css 全局变量资源插件
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
@@ -89,7 +89,6 @@ module.exports = {
       type => addStyleResource(config.module.rule('<%= options.cssPreprocessor%>').oneOf(type))
     )
   },
-
 
   // 开发服务器配置
   devServer: {

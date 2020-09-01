@@ -83,30 +83,6 @@ function addStyleResource (rule) {
 
 本 preset 支持 `element-ui`（默认） 和 `iview`两种。
 
-<!-- ![iview](./screenshot/iview.png) -->
-
-iView
-
-<!-- ![element-ui](./screenshot/element-ui.png) -->
-
-element-ui
-
-### I18n 多语言
-
-多语言采用模块异步延迟加载方式，首先检测语言环境及用户上次使用的语言。在切换语言后，如果尚未加载的语言包将从服务器中加载，达到项目按需加载资源优化。
-
-```
-src
-   i18n
-      index.js
-      zh-CN.js
-      en-US.js
-```
-
-![英文版页面](./screenshot/iview-en.png)
-
-英文版页面
-
 ### 多页模式
 
 通过配置`vue.config.js`的`pages`参数，默认读取 `src/pages`下的各个目录
