@@ -43,8 +43,8 @@ npm run build
 - [x] vue-router/vuex
 - [x] mock server
 - [x] style-resources-loader
-<!-- - [x] i18n -->
 - [x] axios
+<!-- - [x] i18n -->
 
 ### css预处理器全局变量
 
@@ -77,11 +77,12 @@ function addStyleResource (rule) {
     color: @color;
   }
 </style>
+```
 
 
 ### UI 框架
 
-本 preset 支持 `element-ui`（默认） 和 `iview`两种。
+本 preset 支持 `element-ui`（默认）、 `iview` 和 、antd三种å
 
 ### 多页模式
 
