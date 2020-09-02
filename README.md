@@ -50,7 +50,6 @@ npm run build
 - [x] mock server
 - [x] style-resources-loader
 - [x] axios
-<!-- - [x] i18n -->
 
 ### css预处理器全局变量
 
@@ -85,10 +84,9 @@ function addStyleResource (rule) {
 </style>
 ```
 
-
 ### UI 框架
 
-本 preset 支持 `element-ui`（默认）、 `iview` 和 、antd三种å
+本 preset 支持 `element-ui`（默认）、 `iview` 和 、antd三种
 
 ### 多页模式
 
@@ -115,3 +113,6 @@ App.vue
 index.html
 main.js
 ```
+
+### Vuex
+支持vuex，通过将store分割成模块，src最外层为公共模块（module），每个项目里面配置独立的模块（module），通过main.js引入

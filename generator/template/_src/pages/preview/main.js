@@ -1,6 +1,6 @@
 import App from './App.vue'
 import router from './router'
-import store from './store'
+import states from './store'
 import bootstrap from '@/bootstrap'
 
-bootstrap({router, store, App})
+bootstrap({router, states, App})

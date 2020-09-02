@@ -29,7 +29,11 @@ export default {
     };
   },
 
-  created() {},
+  created () {
+    this.$store.dispatch('Dimension/serviceTest', {
+      type: '1'
+    })
+  }
 };
 </script>
 
