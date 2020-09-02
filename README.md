@@ -115,4 +115,24 @@ main.js
 ```
 
 ### Vuex
+
 支持vuex，通过将store分割成模块，src最外层为公共模块（module），每个项目里面配置独立的模块（module），通过main.js引入
+
+### axios
+
+调用接口方式
+
+```
+import API from '@/lib/services'
+
+
+API.get({
+  url: '',
+  data: {}
+}).then(data => {
+  return data
+})
+
+```
+
+*为了代码简洁，建议用一个文件统一存放接口，方便维护*
