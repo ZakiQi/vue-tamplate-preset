@@ -51,7 +51,7 @@ npm run build
 - [x] style-resources-loader
 - [x] axios
 
-### css预处理器全局变量
+## css预处理器全局变量
 
 内置`style-resources-loader`，支持`less`、`sass` 加载全局变量文件。
 
@@ -84,11 +84,11 @@ function addStyleResource (rule) {
 </style>
 ```
 
-### UI 框架
+## UI 框架
 
 本 preset 支持 `element-ui`（默认）、 `iview` 和 、antd三种
 
-### 多页模式
+## 多页模式
 
 通过配置`vue.config.js`的`pages`参数，默认读取 `src/pages`下的各个目录
 
@@ -114,11 +114,11 @@ index.html
 main.js
 ```
 
-### Vuex
+## Vuex
 
 支持vuex，通过将store分割成模块，src最外层为公共模块（module），每个项目里面配置独立的模块（module），通过main.js引入
 
-### axios
+## axios
 
 调用接口方式
 
@@ -134,4 +134,4 @@ API.get({
 })
 
 ```
-*为了代码简洁，建议用一个文件统一存放接口，方便维护*`
+*为了代码简洁，建议用一个文件统一存放接口，方便维护*
