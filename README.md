@@ -51,6 +51,7 @@ npm run build
 - [x] style-resources-loader
 - [x] axios
 - [x] iconfont
+- [x] loadsh
 
 ## css预处理器全局变量
 
@@ -135,7 +136,7 @@ API.get({
 })
 
 ```
-*为了代码简洁，建议用一个文件统一存放接口，方便维护*
+>为了代码简洁，建议用一个文件统一存放接口，方便维护
 
 ## iconfont
 使用阿里巴巴矢量图标库iconfont，存放位置在src/assets/font/
@@ -171,4 +172,12 @@ API.get({
     -moz-osx-font-smoothing: grayscale;
   }
 </style>
+```
+
+## lodash
+默认引入loadsh工具库，已经实现按需打包，打包时候只会打包使用过的模块
+>使用时可以全量引入，不用具体到方法名
+```
+import _ from 'lodash'
+_.add(1, 2)  // 打包时只会引入这一个函数模块
 ```

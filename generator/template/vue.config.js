@@ -7,6 +7,8 @@ const resolve = folder => path.resolve(__dirname, folder)
 const PAGE_PATH = resolve('src/pages')
 
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
+// lodash按需打包插件
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 
 /**
  * 样式预处理器全局变量资源插件
@@ -74,7 +76,10 @@ module.exports = {
           test: /\.(js|css)(\?.*)?$/i,  //需要压缩的文件正则
           threshold: 10240, //文件大小大于这个值时启用压缩
           deleteOriginalAssets: false //压缩后保留原文件
-        })
+        }),
+
+        // lodash按需打包
+        new LodashModuleReplacementPlugin()
       ],
       optimization: {
         runtimeChunk: process.env.NODE_ENV === 'production' ? { name: 'manifest' } : false,
