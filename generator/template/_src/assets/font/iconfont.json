@@ -1,0 +1,163 @@
+{
+  "id": "1817640",
+  "name": "componentsIcon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "常用的icon",
+  "glyphs": [
+    {
+      "icon_id": "351761",
+      "name": "减号",
+      "font_class": "jianhao",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "1265484",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "1308250",
+      "name": "102方向_向下",
+      "font_class": "102fangxiang_xiangxia",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "1308253",
+      "name": "103方向_向左",
+      "font_class": "103fangxiang_xiangzuo",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "1308262",
+      "name": "100方向_向上",
+      "font_class": "100fangxiang_xiangshang",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "1308264",
+      "name": "101方向_向右",
+      "font_class": "101fangxiang_xiangyou",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "5203258",
+      "name": "加号",
+      "font_class": "jiahao1",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "5327593",
+      "name": "减号",
+      "font_class": "jianhao1",
+      "unicode": "e723",
+      "unicode_decimal": 59171
+    },
+    {
+      "icon_id": "5909692",
+      "name": "方向",
+      "font_class": "fangxiang",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "6299448",
+      "name": "方向",
+      "font_class": "icon-",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "7556166",
+      "name": "减号",
+      "font_class": "jianhao2",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "7937660",
+      "name": "方向-向下",
+      "font_class": "fangxiang-xiangxia",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "7937661",
+      "name": "方向-向上",
+      "font_class": "fangxiang-xiangshang",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "7937662",
+      "name": "方向-向左",
+      "font_class": "fangxiang-xiangzuo",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "7937663",
+      "name": "方向-向右",
+      "font_class": "fangxiang-xiangyou",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "7939944",
+      "name": "方向-向右",
+      "font_class": "arrow-",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "7939945",
+      "name": "方向-向右直角",
+      "font_class": "arrow-1",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "10506203",
+      "name": "关闭文件夹",
+      "font_class": "huabanfuben",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "10622229",
+      "name": "文件",
+      "font_class": "dilanxianxingiconyihuifu_huabanfuben",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "12686942",
+      "name": "文件",
+      "font_class": "icon-1",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "13646829",
+      "name": "文件",
+      "font_class": "wenjian",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "13905862",
+      "name": "文件",
+      "font_class": "wenjian1",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    }
+  ]
+}

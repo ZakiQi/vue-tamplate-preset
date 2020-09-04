@@ -50,6 +50,7 @@ npm run build
 - [x] mock server
 - [x] style-resources-loader
 - [x] axios
+- [x] iconfont
 
 ## css预处理器全局变量
 
@@ -135,3 +136,39 @@ API.get({
 
 ```
 *为了代码简洁，建议用一个文件统一存放接口，方便维护*
+
+## iconfont
+使用阿里巴巴矢量图标库iconfont，存放位置在src/assets/font/
+
+支持unicode、font-class两种引用方式
+
+使用方式
+
+```
+<i class="iconfont iconjiahao"></i>
+或
+<i class="iconfont">&#xe608;</i>
+```
+
+引用位置在项目的APP.vue中添加如下样式
+```
+<style>
+  @import url('../../assets/font/iconfont.css');
+  @font-face {
+    font-family: 'iconfont';
+    src: url('../../assets/font/iconfont.eot');
+    src: url('../../assets/font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/font/iconfont.woff') format('woff'),
+    url('../../assets/font/iconfont.ttf') format('truetype'),
+    url('../../assets/font/iconfont.svg#iconfont') format('svg');
+  }
+
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+</style>
+```
