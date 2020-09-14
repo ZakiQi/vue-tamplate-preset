@@ -47,10 +47,11 @@ npm run build
 - [x] ES6
 - [x] element-ui/iview/antd
 - [x] vue-router/vuex
-- [x] mock server
 - [x] axios
 - [x] iconfont
 - [x] loadsh
+- [x] mockjs
+
 
 ## css预处理器全局变量
 
@@ -180,4 +181,45 @@ https://imys.net/20161217/webpack-use-lodash.html
 ```
 import _ from 'lodash'
 _.add(1, 2)  // 打包时只会引入这一个函数模块
+```
+
+##mockjs
+main.js单独引入了mockjs模块，结合axios，可以在请求的时候拦截url，并返回对应的mock数据
+1、mock/mock.js为项目mock的配置文件
+```
+import Mock from 'mockjs'
+import testData from './mockData/testData'
+
+// 三个参数分别为：拦截的地址，请求的方式，返回的数据
+Mock.mock('/data/tableData?data=1', 'get', testData)
+```
+
+2、同级文件夹/js文件存放mock的数据
+```
+///mockData/testData.js
+import Mock from 'mockjs' // 引入mockjs
+
+const Random = Mock.Random // Mock.Random 是一个工具类，用于生成各种随机数据
+
+let data = [] // 用于接受生成数据的数组
+data.type = 1
+
+export default data
+```
+
+3、在main.js中引入mock.js
+```
+//main.js
+require('./mock/mock.js')
+```
+
+4、项目中使用axios请求
+```
+//vue项目中使用
+API.get({
+  url: '/data/tableData',
+  data: {type: 1}
+}).then(data => {
+  return data
+})
 ```
