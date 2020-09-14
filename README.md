@@ -43,12 +43,11 @@ npm run build
 
 ## 功能列表
 
-- [x] postcss/less/sass
-- [x] ES6/Typescript
-- [x] element-ui/iview
+- [x] less/sass
+- [x] ES6
+- [x] element-ui/iview/antd
 - [x] vue-router/vuex
 - [x] mock server
-- [x] style-resources-loader
 - [x] axios
 - [x] iconfont
 - [x] loadsh
@@ -175,6 +174,7 @@ API.get({
 ```
 
 ## lodash
+https://imys.net/20161217/webpack-use-lodash.html
 默认引入loadsh工具库，已经实现按需打包，打包时候只会打包使用过的模块
 >使用时可以全量引入，不用具体到方法名
 ```

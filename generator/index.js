@@ -27,7 +27,8 @@ module.exports = (api, options, rootoptions) => {
       'style-resources-loader': '1.2.1',
       "compression-webpack-plugin": "^5.0.1",
       "lodash-webpack-plugin": "^0.11.5",
-      "babel-plugin-lodash": "^3.3.4"
+      "babel-plugin-lodash": "^3.3.4",
+      "mockjs": "^1.1.0"
     }
   });
 
@@ -90,13 +91,15 @@ module.exports = (api, options, rootoptions) => {
     }
   })
 
-  // 删除多余的模板
-  api.render(files => {
-    Object.keys(files)
-          .filter(path => path.startsWith('src/') || path.startsWith('public/'))
-          .forEach(path => delete files[path])
-  })
-  
   // 生成模版
   api.render('./template');
+
+  // 删除多余的模板
+  api.render(files => {
+      Object.keys(files)
+      .filter(path => path.startsWith('src/') || path.startsWith('public/'))
+      .forEach(path => delete files[path])
+  })
+  
+  
 };

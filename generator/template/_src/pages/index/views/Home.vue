@@ -30,8 +30,10 @@ export default {
   },
 
   created () {
-    this.$store.dispatch('Dimension/serviceTest', {
-      type: '1'
+    this.$store.dispatch('Dimension/serviceTest', { 
+      data: 1 
+    }).then(data => {
+      console.log(data, 'eeee')
     })
   }
 };

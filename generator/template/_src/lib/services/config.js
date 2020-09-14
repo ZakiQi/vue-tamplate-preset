@@ -1,7 +1,7 @@
 /* 配置相关常量 */
 const WEB_CONFIG = {
   dev: {
-    baseURL: '/mock',
+    // baseURL: '/mock',
   },
   prod: {
     baseURL: '/api',

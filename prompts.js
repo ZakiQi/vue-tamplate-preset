@@ -15,22 +15,22 @@ module.exports = [
     ],
     default: 'less'
   },
-  // {
-  //   name: 'Vue Router mode',
-  //   type: 'list',
-  //   message: 'Choice Vue Router History mode',
-  //   choices: [
-  //     {
-  //       name: 'Hash',
-  //       value: 'hash'
-  //     },
-  //     {
-  //       name: 'history',
-  //       value: 'history'
-  //     }
-  //   ],
-  //   default: 'hash'
-  // },
+  {
+    name: 'Vue Router mode',
+    type: 'list',
+    message: 'Choice Vue Router History mode',
+    choices: [
+      {
+        name: 'Hash',
+        value: 'hash'
+      },
+      {
+        name: 'history',
+        value: 'history'
+      }
+    ],
+    default: 'history'
+  },
   // {
   //   name: 'Typescript',
   //   type: 'confirm',

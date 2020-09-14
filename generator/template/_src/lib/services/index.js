@@ -27,11 +27,14 @@ service.interceptors.request.use(
 // 响应拦截器
 service.interceptors.response.use(
   (response) => {
-    console.log(response, 'response')
-    // let { data } = response
-    return response
+    if (response && response.status === 200) {
+      let { data } = response
+      return data
+    } else {
+      Message.error('error')
+    }
   },
-  (error) => {
+  (_error) => {
     <% if (options['ui-framework'] === 'antd') {%>
     Message.error('error')
     <% } %>
@@ -44,14 +47,14 @@ service.interceptors.response.use(
  * @returns {Promise<AxiosResponse<any>>}
  */
 service.get = async (config) => {
-    config.params = Object.assign({}, config.data, config.params, {method: 'GET'})
-    delete config.data
+  config.params = Object.assign({}, config.data, config.params)
+  delete config.data
 
-    const result = await service(Object.assign({
-      method: 'GET'
-    }, config))
+  const result = await service(Object.assign({
+    method: 'GET'
+  }, config))
 
-    return result
+  return result
 }
 
 /**

@@ -1,17 +1,17 @@
 import API from '@/lib/services/index.js'
 
-// 多维度单页vuex 
+// 多维度单页vuex
 export default {
   namespaced: true,
-  
+
   state: {
-    name: 'dimension',
+    name: 'dimension'
   },
 
   actions: {
     serviceTest ({ commit }, payoad = {}) {
       return API.get({
-        url: 'creative/creative/Size/addSizes',
+        url: '/data/tableData',
         data: payoad
       }).then(data => {
         return data
@@ -19,4 +19,3 @@ export default {
     }
   }
 }
-
