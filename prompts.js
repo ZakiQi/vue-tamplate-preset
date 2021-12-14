@@ -43,7 +43,7 @@ module.exports = [
     message: 'choice UI ui-framework',
     choices: [
       {
-        name: 'Element UI',
+        name: 'element-ui',
         value: 'element-ui'
       },
       {

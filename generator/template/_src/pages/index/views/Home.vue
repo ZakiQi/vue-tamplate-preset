@@ -39,6 +39,7 @@ export default {
 };
 </script>
 
+<% if (options['cssPreprocessor'] === 'less') {%>
 <style lang="less" scoped>
 .chart-style {
   width: 400px;
@@ -46,3 +47,14 @@ export default {
   float: left;
 }
 </style>
+<% } %>
+
+<% if (options['cssPreprocessor'] === 'sass') {%>
+<style lang="scss" scoped>
+.chart-style {
+  width: 400px;
+  height: 300px;
+  float: left;
+}
+</style>
+<% } %>

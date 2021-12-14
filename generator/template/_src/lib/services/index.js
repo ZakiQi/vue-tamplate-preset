@@ -2,8 +2,9 @@ import Vue from 'vue'
 import axios from 'axios'
 <% if (options['ui-framework'] === 'antd') {%>
 import Message from 'ant-design-vue/lib/message';
-<% } %>
 import 'ant-design-vue/dist/antd.css';
+<% } %>
+
 import config from './config'
 
 let service = axios.create({
@@ -31,7 +32,9 @@ service.interceptors.response.use(
       let { data } = response
       return data
     } else {
+      <% if (options['ui-framework'] === 'antd') {%>
       Message.error('error')
+      <% } %>
     }
   },
   (_error) => {

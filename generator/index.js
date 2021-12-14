@@ -73,8 +73,8 @@ module.exports = (api, options, rootoptions) => {
   if (options['cssPreprocessor'] === 'sass') {
     api.extendPackage({
       devDependencies: {
-        "node-sass": "^4.9.3",
-        "sass-loader": "^7.1.0"
+        "node-sass": "^5.0.0",
+        "sass-loader":  "^10.1.0"
       }
     })
   }
