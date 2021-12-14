@@ -100,6 +100,11 @@ module.exports = (api, options, rootoptions) => {
       .filter(path => path.startsWith('src/') || path.startsWith('public/'))
       .forEach(path => delete files[path])
   })
-  
-  
+
+
+  api.render(files => {
+    Object.keys(files)
+      .filter(path => path.includes(`/${options.cssPreprocessor === 'sass' ? 'less' : 'sass' }/`))
+      .forEach(path => delete files[path])
+  })
 };
