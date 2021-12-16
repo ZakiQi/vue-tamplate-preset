@@ -18,7 +18,6 @@ module.exports = (api, options, rootoptions) => {
       'axios': '^0.18.0',
       'babel-polyfill': '^6.22.0',
       "lodash": '^4.17.20',
-      "echarts": "^4.2.0-rc.1",
       'normalize.css': '^8.0.0',
     },
     // 开发依赖包
@@ -79,6 +78,15 @@ module.exports = (api, options, rootoptions) => {
     })
   }
 
+  if (options['charts'] === 'yes') {
+    api.extendPackage({
+      devDependencies: {
+        "echarts": "^5.1.2",
+        "vue-echarts": "^5.0.0-beta.0"
+      }
+    })
+  }
+
   // 扩展 .eslintrc 配置
   api.extendPackage({
     eslintConfig: {
@@ -101,6 +109,12 @@ module.exports = (api, options, rootoptions) => {
       .forEach(path => delete files[path])
   })
 
+  // 不需要charts的清除charts代码目录
+  options.charts === 'no' && api.render(files => {
+    Object.keys(files)
+    .filter(path => path.includes('charts/'))
+    .forEach(path => delete files[path])
+  })
 
   api.render(files => {
     Object.keys(files)

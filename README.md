@@ -1,10 +1,22 @@
-# vue-tamplate-preset
+# vu-cli-preset
+preset要做的事情就是当别人使用 vue create xxx 命令初始化一个前端项目时，可以初始化信息，好处有两点：
 
-vue项目开发预设模板
+1、团队内部所有的新项目都是统一的目录结构和代码组织方式，便于维护
+2、后期可以开发公共插件服务于不同的项目，提高效率
+
+##vue项目开发预设模板
 
 [https://github.com/ZakiQi/vue-tamplate-preset](https://github.com/ZakiQi/vue-tamplate-preset)
 
-## Install
+这个 repo 应该包含以下文件：
+```
+preset.json: 包含 preset 数据的主要文件（必需）。
+generator/index.js: 一个可以注入或是修改项目中文件的 Generator,(配置安装的依赖，或者根据prompts.js里的选项，选择安装特定的依赖包)
+prompts.js: 一个可以通过命令行对话为 generator 收集选项的 prompts 文件（安装时候的对话，收集选择的安装信息）。
+```
+
+
+## Use
 
 ```
 # 首先安装vue-cli 4.0
@@ -15,7 +27,8 @@ vue项目开发预设模板
 # OR more faster!!!
 # - project-name
 # - vue-tamplate-preset
-project-name> cd ..
+project-name > cd ..
+
 > git clone https://github.com/ZakiQi/vue-tamplate-preset.git
 > cd vue-tamplate-preset
 > git pull origin master
@@ -51,6 +64,7 @@ npm run build
 - [x] iconfont
 - [x] loadsh
 - [x] mockjs
+- [x] echarts
 
 
 ## css预处理器全局变量
@@ -88,7 +102,7 @@ function addStyleResource (rule) {
 
 ## UI 框架
 
-本 preset 支持 `element-ui`（默认）、 `iview` 和 、antd三种
+支持 `element-ui`（默认）、 `iview` 和 、`antd`三种
 
 ## 多页模式
 
@@ -121,6 +135,9 @@ main.js
 支持vuex，通过将store分割成模块，src最外层为公共模块（module），每个项目里面配置独立的模块（module），通过main.js引入
 
 ## axios
+
+请求超时时间1分钟
+
 
 调用接口方式
 
@@ -223,3 +240,9 @@ API.get({
   return data
 })
 ```
+
+
+## echarts
+echarts依赖是可选项安装时选择安装echarts选项之后会默认安装echarts依赖包（echarts选项默认为no不安装echarts依赖）
+
+当选择需要安装echarts依赖时，会生成src/component/charts文件，包含一个入口文件index.js和饼图、柱状图两张图表文件，选择不安装则不会生成charts文件夹

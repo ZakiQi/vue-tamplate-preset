@@ -61,6 +61,22 @@ module.exports = [
     ],
     default: 'none'
   },
+  {
+    name: 'charts',
+    type: 'list',
+    message: 'If you need charts?(yes/no)',
+    choices: [
+      {
+        name: 'yes',
+        value: 'yes'
+      },
+      {
+        name: 'no',
+        value: 'no'
+      }
+    ],
+    default: 'no'
+  },
   // {
   //   name: 'Mock Server',
   //   type: 'list',
